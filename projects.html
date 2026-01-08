@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Chakila</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <h1>My Projects</h1>
+</header>
+
+<section class="projects">
+  <h2>My Work</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="2.png" alt="Student Management System">
+      <h3>Student Management System</h3>
+    </div>
+    <div class="project-card">
+      <img src="3.png" alt="Portfolio Website">
+      <h3>Portfolio Website</h3>
+    </div>
+    <div class="project-card">
+      <img src="4.png" alt="AI Chatbot App">
+      <h3>AI Chatbot App</h3>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Chakila | All rights reserved</p>
+</footer>
+
+</body>
+</html>
+<script>
+// Fade-in sections when scrolling
+const sections = document.querySelectorAll('section');
+
+const showSections = () => {
+  const triggerBottom = window.innerHeight / 5 * 4;
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < triggerBottom) {
+      section.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showSections);
+window.addEventListener('load', showSections);
+</script>
